@@ -28,8 +28,8 @@ make create_site
 
 ## Contribute
 
-- [Issue Tracker](https://github.com/collective/trems/issues)
-- [Source Code](https://github.com/collective/trems/)
+- [Issue Tracker](https://github.com/William-Ourives/trems/issues)
+- [Source Code](https://github.com/William-Ourives/trems/)
 
 ## License
 

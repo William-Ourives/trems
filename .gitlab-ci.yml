@@ -23,30 +23,30 @@ build-backend:
   script:
     - cd backend
     - make build-image
-    - docker push $CI_REGISTRY/collective/trems/backend:latest
+    - docker push $CI_REGISTRY/William-Ourives/trems/backend:latest
 
 build-frontend:
   stage: build
   script:
     - cd frontend
     - make build-image
-    - docker push $CI_REGISTRY/collective/trems/frontend:latest
+    - docker push $CI_REGISTRY/William-Ourives/trems/frontend:latest
 
 release-image-backend:
   stage: release
   script:
-    - docker pull $CI_REGISTRY/collective/trems/backend:latest
-    - docker tag $CI_REGISTRY/collective/trems/backend $CONTAINER_BACKEND_RELEASE_IMAGE
-    - docker push $CI_REGISTRY/collective/trems/backend:latest
+    - docker pull $CI_REGISTRY/William-Ourives/trems/backend:latest
+    - docker tag $CI_REGISTRY/William-Ourives/trems/backend $CONTAINER_BACKEND_RELEASE_IMAGE
+    - docker push $CI_REGISTRY/William-Ourives/trems/backend:latest
   only:
     - main
 
 release-image-frontend:
   stage: release
   script:
-    - docker $CI_REGISTRY/collective/trems/frontend:latest
-    - docker tag $CI_REGISTRY/collective/trems/frontend $CONTAINER_FRONTEND_RELEASE_IMAGE
-    - docker push $CI_REGISTRY/collective/trems/frontend:latest
+    - docker $CI_REGISTRY/William-Ourives/trems/frontend:latest
+    - docker tag $CI_REGISTRY/William-Ourives/trems/frontend $CONTAINER_FRONTEND_RELEASE_IMAGE
+    - docker push $CI_REGISTRY/William-Ourives/trems/frontend:latest
   only:
     - main
 

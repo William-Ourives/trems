@@ -7,7 +7,7 @@ SHELL:=bash
 .DELETE_ON_ERROR:
 MAKEFLAGS+=--warn-undefined-variables
 MAKEFLAGS+=--no-builtin-rules
-IMAGE_NAME=ghcr.io/collective/trems-frontend
+IMAGE_NAME=ghcr.io/William-Ourives/trems-frontend
 IMAGE_TAG=latest
 
 NODEBIN = ./node_modules/.bin

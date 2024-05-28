@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME_PREFIX: ghcr.io/collective/trems
+  IMAGE_NAME_PREFIX: ghcr.io/William-Ourives/trems
   IMAGE_NAME_SUFFIX: frontend
   NODE_VERSION: 18.x
 

@@ -2,8 +2,8 @@
 
 [![Built with Cookiecutter Plone Starter](https://img.shields.io/badge/built%20with-Cookiecutter%20Plone%20Starter-0083be.svg?logo=cookiecutter)](https://github.com/collective/cookiecutter-plone-starter/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![Backend Tests](https://github.com/collective/trems/actions/workflows/backend.yml/badge.svg)](https://github.com/collective/trems/actions/workflows/backend.yml)
-[![Frontend Tests](https://github.com/collective/trems/actions/workflows/frontend.yml/badge.svg)](https://github.com/collective/trems/actions/workflows/frontend.yml)
+[![Backend Tests](https://github.com/William-Ourives/trems/actions/workflows/backend.yml/badge.svg)](https://github.com/William-Ourives/trems/actions/workflows/backend.yml)
+[![Frontend Tests](https://github.com/William-Ourives/trems/actions/workflows/frontend.yml/badge.svg)](https://github.com/William-Ourives/trems/actions/workflows/frontend.yml)
 
 A new project using Plone 6.
 
@@ -23,7 +23,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
 ```shell
-git clone git@github.com:collective/trems.git
+git clone git@github.com:William-Ourives/trems.git
 cd trems
 ```
 

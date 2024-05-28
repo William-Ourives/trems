@@ -152,16 +152,16 @@ stack-rm:  ## Local Stack: Remove Services and Volumes
 .PHONY: build-acceptance-servers
 build-acceptance-servers: ## Build Acceptance Servers
 	@echo "Build acceptance backend"
-	@docker build backend --build-arg PLONE_VERSION=${PLONE_VERSION} -t collective/trems-backend:acceptance -f backend/Dockerfile.acceptance
+	@docker build backend --build-arg PLONE_VERSION=${PLONE_VERSION} -t William-Ourives/trems-backend:acceptance -f backend/Dockerfile.acceptance
 	@echo "Build acceptance frontend"
-	@docker build frontend --build-arg VOLTO_VERSION=${VOLTO_VERSION} -t collective/trems-frontend:acceptance -f frontend/Dockerfile
+	@docker build frontend --build-arg VOLTO_VERSION=${VOLTO_VERSION} -t William-Ourives/trems-frontend:acceptance -f frontend/Dockerfile
 
 .PHONY: start-acceptance-servers
 start-acceptance-servers: build-acceptance-servers ## Start Acceptance Servers
 	@echo "Start acceptance backend"
-	@docker run --rm -p 55001:55001 --name trems-backend-acceptance -d collective/trems-backend:acceptance
+	@docker run --rm -p 55001:55001 --name trems-backend-acceptance -d William-Ourives/trems-backend:acceptance
 	@echo "Start acceptance frontend"
-	@docker run --rm -p 3000:3000 --name trems-frontend-acceptance --link trems-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d collective/trems-frontend:acceptance
+	@docker run --rm -p 3000:3000 --name trems-frontend-acceptance --link trems-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d William-Ourives/trems-frontend:acceptance
 
 .PHONY: stop-acceptance-servers
 stop-acceptance-servers: ## Stop Acceptance Servers
@@ -184,7 +184,7 @@ start-test-acceptance-frontend-dev: ## Start the Acceptance Frontend Fixture in 
 .PHONY: start-test-acceptance-server
 start-test-acceptance-server: build-acceptance-servers ## Start Backend Acceptance Servers in development mode
 	@echo "Starting test acceptance server"
-	@docker run --rm -p 55001:55001 --name trems-backend-acceptance -d collective/trems-backend:acceptance
+	@docker run --rm -p 55001:55001 --name trems-backend-acceptance -d William-Ourives/trems-backend:acceptance
 	@echo "Started test acceptance server"
 
 .PHONY: test-acceptance
